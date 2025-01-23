@@ -1,4 +1,4 @@
-﻿namespace LabTrans
+﻿namespace Kognit
 {
     public static class Settings
     {

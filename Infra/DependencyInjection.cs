@@ -1,9 +1,9 @@
 ﻿using Domain.Interfaces;
-using LabTrans.Infra.Repositories;
 using Infra.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Kognit.Infra.Repositories;
 
 namespace Infra
 {
@@ -12,11 +12,11 @@ namespace Infra
         public static IServiceCollection AddServicesInfra(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddTransient<IUserRepository, UserRepository>();
-            services.AddTransient<IReservaRepository, ReservaRepository>();
+            services.AddTransient<IWalletRepository, WalletRepository>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
 
-            services.AddDbContext<LabTransContext>(opt => opt
-                .UseSqlServer(configuration.GetConnectionString("DB_LabTrans")));
+            services.AddDbContext<ApplicationDbContext>(opt => opt
+                .UseSqlServer(configuration.GetConnectionString("DB_Kognit")));
 
             return services;
         }

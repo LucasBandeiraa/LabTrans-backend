@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Interfaces
 {
-    public interface IReservaRepository : IGenericRepository<Reserva>
+    public interface IWalletRepository : IGenericRepository<Wallet>
     {
     }
 }
