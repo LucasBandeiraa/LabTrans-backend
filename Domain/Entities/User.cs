@@ -9,14 +9,9 @@ namespace Domain.Entities
     public class User
     {
         public int Id { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-
-        public User(string username, string password)
-        {
-            Username = username;
-            Password = password;
-        }
-
+        public string Nome { get; set; }
+        public DateTime Nascimento { get; set; }
+        public string CPF { get; set; }
+        public ICollection<Wallet> Wallets { get; set; }
     }
 }

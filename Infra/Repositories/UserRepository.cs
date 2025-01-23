@@ -2,11 +2,11 @@
 using Domain.Interfaces;
 using Infra.Data;
 
-namespace LabTrans.Infra.Repositories
+namespace Kognit.Infra.Repositories
 {
     public class UserRepository : GenericRepository<User>, IUserRepository
     {
-        public UserRepository(LabTransContext context) : base(context)
+        public UserRepository(ApplicationDbContext context) : base(context)
         {
 
         }

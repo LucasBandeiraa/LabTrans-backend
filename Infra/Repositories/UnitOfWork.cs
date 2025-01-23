@@ -1,20 +1,21 @@
-﻿using Domain.Interfaces;
+﻿using Domain.Entities;
+using Domain.Interfaces;
 using Infra.Data;
 
-namespace LabTrans.Infra.Repositories
+namespace Kognit.Infra.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
-        protected readonly LabTransContext _context;
+        protected readonly ApplicationDbContext _context;
         public IUserRepository UserRepository { get; }
-        public IReservaRepository ReservaRepository { get; }
+        public IWalletRepository WalletRepository { get; }
 
 
-        public UnitOfWork(LabTransContext context, IUserRepository users, IReservaRepository reservas)
+        public UnitOfWork(ApplicationDbContext context, IUserRepository users, IWalletRepository wallets)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
             UserRepository = users ?? throw new ArgumentNullException(nameof(users));
-            ReservaRepository = reservas ?? throw new ArgumentNullException(nameof(reservas));
+            WalletRepository = wallets ?? throw new ArgumentNullException(nameof(wallets));
         }
 
         public int Commit()

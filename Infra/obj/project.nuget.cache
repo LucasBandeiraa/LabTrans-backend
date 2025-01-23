@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1ckMAHK99YmMEi8w3WD0tE/1uY/pDS0GZaTsIbSX/SFa/veloNhRdrauMSa2sPXLlHpS46Qau8QvuH2qDMwy7A==",
+  "dgSpecHash": "mcOK1rzcOEo=",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\LabTrans-DDD\\Infra\\Infra.csproj",
+  "projectFilePath": "C:\\Users\\lucas\\source\\repos\\Kognit\\Infra\\Infra.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucas\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

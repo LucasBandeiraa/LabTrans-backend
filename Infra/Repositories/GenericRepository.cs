@@ -2,13 +2,13 @@
 using Infra.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace LabTrans.Infra.Repositories
+namespace Kognit.Infra.Repositories
 {
     public abstract class GenericRepository<T> : IGenericRepository<T> where T: class
     {
-        protected readonly LabTransContext _context;
+        protected readonly ApplicationDbContext _context;
 
-        protected GenericRepository(LabTransContext context)
+        protected GenericRepository(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -41,6 +41,11 @@ namespace LabTrans.Infra.Repositories
         public IQueryable<T> List()
         {
             return _context.Set<T>();
+        }
+
+        public async Task<IEnumerable<T>> GetAllUsersWallets(int userId)
+        {
+            return await _context.Set<T>().ToListAsync();
         }
     }
 }
